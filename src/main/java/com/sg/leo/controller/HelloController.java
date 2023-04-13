@@ -22,9 +22,12 @@ public class HelloController {
 	public String jsp(Model model) {
 		System.out.println("JSP 파일이 요청됨 hellocontroller");
 		model.addAttribute("username", "이 콘텐츠주인: 엄선호");
-		
 		return "hellojsp";
-	}	
+	}
 	
+	@GetMapping("/")
+	public String getBeginpoint() {
+		return "index";
+	}
 }
 
